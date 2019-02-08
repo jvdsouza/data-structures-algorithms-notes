@@ -1,0 +1,9 @@
+Pros:
+- easy to store data
+- contiguous
+- can add and delete to the end of this data structure with O(1) time complexity
+
+Cons:
+- needs to be ordered in memory and contiguous
+- static arrays require memory reallocation to add data to, causes .push() to be O(n)
+- inserting and deleting anywhere not in the last item means O(n) time complexity

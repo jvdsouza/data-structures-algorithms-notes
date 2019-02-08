@@ -1,0 +1,7 @@
+-useful for repeated subtasks to do
+-need to hold onto all call stacks and allocate when when a new call is made
+lots of memory is used and can cause a stack overflow
+-needs a base case or a stop point
+1. identify base case
+2. identify the recursive case
+3. get closer and closer and return when needed

@@ -1,0 +1,17 @@
+Pros:
+all inserting, deleting, and searching is O(1)
+for lookups, good collision resolution gives O(1)
+flexible keys
+
+Cons:
+hash functions do take up time complexity, albeit small
+no instruction to evenly distribute due to hashes
+-> this is called collision
+-> collisions slow the ability to access or change information
+-> slows down from O(1) to O(n/k) where k is the size of the hash table
+-> simplified O(n)
+Has O(n) where n is the allocated space of the hash map, filled or unfilled
+arrays dont have this, as they only have space of filled values
+No guaranteed order
+Slow key iteration
+doesnt maintain relationships

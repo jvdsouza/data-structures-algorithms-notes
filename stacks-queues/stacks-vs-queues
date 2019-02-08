@@ -1,0 +1,24 @@
+//Stacks
+//Array
+//-dynamic arrays will use up double space and cause an O(n) time to
+//shift content from one set of contiguous data to another if they reach the limit
+//-easier to store and manipulate, not complex
+//-fast to access start or end of an array
+//cache locality from organised contiguous data allows faster access to start and end
+
+//Link List
+//-flexible memory, can add or remove just one
+//-more complex structure, requires a bit of set up if not initially built in
+//to the language
+//-longer to traverse a linked list
+//-more memory required to store
+//-can also access the head or tail in O(1), needs to have a pointer to head and tail
+//means more memory usage if you point to tail as well
+
+//Queues
+//Array
+//-to shift or unshift, ie deal with the first item in the list, they require O(n)
+//time to move all the elements over by 1
+//Linked List
+//do not have that issue, and keeps a O(1) time complexity when dealing with the first
+//item in the list

@@ -1,0 +1,21 @@
+Pros:
+dont need contiguous blocks of data
+uses up left over space
+ordered
+removing or inserting at first element is O(1)
+inserting and deleting elements is simpler than an array
+flexible size
+appending is O(1)
+
+doubly linked lists technically have searchups of O(n/2) time
+doubly linked lists can search backwards
+
+Cons:
+more memory required
+searching, inserting, deleting is O(n) if not at the first element
+scattered memory
+more memory
+slow lookup
+
+doubly linked lists require more memory than singly
+doubly linked lists are more complex to implement

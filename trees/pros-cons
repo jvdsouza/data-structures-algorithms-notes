@@ -1,0 +1,127 @@
+Perfect binary tree:
+-really efficient and desirable
+-number of total nodes doubles as it moves down the tree
+-number of nodes on the last level is the sum of all other nodes on
+all other levels + one
+-lookup, insert, delete of O(log N)
+- nodes at a level = 2^level
+- total nodes = 2^height - 1
+- log(nodes) = height
+
+
+Binary search tree
+- all child nodes on the right of the tree must be greater than current node
+- all child nodes on the left of the tree must be lesser than current node
+- a node can only have up to 2 children
+Pros:
+great at searching
+preserves relationships
+Better than O(n) (if balanced)
+Ordered
+Flexible size
+
+Cons:
+Need to traverse to the nodes to insert or delete a node
+unbalanced search trees cause effectively a linked list causing:
+-> lookups, searches, inserts, deletes turn to O(n)
+no O(1) operations
+
+--------------------------------------------------------------------------------
+
+AVL tree or red black trees automatically rebalances Binary search tree
+AVL trees rearranges nodes such that the levels are always balanced
+Red Black tree use red and black
+
+AVL trees:
+https://medium.com/basecs/the-little-avl-tree-that-could-86a3cae410c7
+- self balancing binary search tree
+- rearranges itself to be height-balanced whenever the structure is augmented
+- we can rearrange subtrees or trees to be height balanced when the difference
+in heights of children nodes are greater than 1
+- If the subtrees of a node has heights h1 and h2, then the absolute value
+of those two heights must be less than or equal to 1 (<=1). In other words,
+the difference between heights of two subtrees in an AVL tree should never exceed
+1 level.
+-balance factor |h1-h2| <= 1
+-node swapping called 'rotations'
+--single rotations and double rotations
+---single rotations with left and right rotation
+----left rotation is used if the right node higher up subtree is larger
+----right rotation is used if the left node higher up subtree is larger
+---double rotations with left-right rotation and right-left rotation
+----left-right rotation is a combination of left followed by right rotation
+-----if node's parent and child are both greater than the node
+----right-left rotation is a combination of right followed by left rotation
+-----if node's parent and child are both lesser than the node
+
+Red Black trees:
+https://medium.com/basecs/painting-nodes-black-with-red-black-trees-60eacb2be9a5
+- type of self-balancing binary search tree that adheres to a strict set of rules
+in order to maintain a logarithmic time complexity
+-rules:
+--Each node must either be Red or Black
+--the root of the tree must ALWAYS be black
+--two Red nodes can never appear in a row within the tree; a Red node must always
+have a Black parent node, and Black child nodes
+--every branch path from the root node in the tree to a NULL pointer passes through
+the _exact same number_ of Black nodes (this is also an unsuccessful search path)
+-a null leaf node is always considered to be a Black node, not red
+-as a general rule, a chain of 3 nodes is not possible in a red-black tree
+
+-initially figure where the new node would go in a regular BST
+-can this node be made red to stop any violations of the rules, if it does violate
+rules as a black node?
+-otherwise, perform rotations just like in AVL tree
+-larger red-black trees deal with violations by moving them up the tree as they grow
+-if we cant recolor any higher nodes, then rotate at the last violating node
+-insertions and deletions take O(log n) as the tree is now balanced
+-adding color to a node is O(1)
+-rotations and recolors are O(1)
+-O(log n) is worst case scenario time complexity
+-space complexity is the same as a BST
+-tracking the color of a node only requires 1 bit
+
+-AVL trees are more rigidly balanced and hence provide faster look-ups. Thus for
+a look-up intensive task use an AVL tree.
+-For an insert intensive tasks, use a Red-Black tree.
+-AVL trees store the balance factor at each node. This takes O(N) extra space.
+However, if we know that the keys that will be inserted in the tree will always
+be greater than zero, we can use the sign bit of the keys to store the colour
+information of a red-black tree. Thus, in such cases red-black tree takes O(1)
+extra space.
+-In general, the rotations for an AVL tree are harder to implement and debug
+than that for a Red-Black tree.
+
+-Red-black trees are more general purpose. They do relatively well on add,
+remove, and look-up but AVL trees have faster look-ups at the cost of slower
+add/remove.
+
+Binary Heap:
+-every child node is lesser than their parent node (max heap)
+-min heap has the root as the smallest number and every child node is greater than
+the parent node
+-used a lot in priority queues
+-less meaning between left and right nodes, so lookup is O(n)
+-good at comparitive operations
+-used in data storage, priority queues and sorting algorithms
+-inserts from left to right, bubbles up if greater than the parent nodes
+-inserting is O(1) best case or O(log n) for worst case
+-priority queue:
+--different elements have different priorities
+--highest priorities are processed first
+
+Pros:
+-Better than O(n) insertion
+-Idea of priority
+-Flexible size
+-Fast insert
+
+Cons:
+-Slow lookup
+
+Tries:
+-Tree specialist in searching (mostly with text)
+-Can outperform binary trees and most other data structures depending on the
+items being searched up
+-searches for words are O(length of word)
+-space saved using prefixes

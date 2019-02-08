@@ -1,0 +1,38 @@
+anything you can do with recursion can be done iteratively (loop)
+
+sometimes it's easier to write recursive functions
+recursion can keep your code DRY
+can make your code more readable
+
+may not be the best solution
+
+Pros:
+DRY
+readability
+good for when you dont know how deep your data structures are and
+dont know how many loops to go through
+tail call optimisation allows you to do recursion without increasing the
+call stack (JS ES6)
+able to maintain state at different level of recursions
+
+Cons:
+Large Stack (more memory requirement)
+can be less efficient in complexities compared to iterative
+
+tail call optimisation:
+Even though tail call optimization is part of the language specification,
+it isn’t supported by many engines and that may never change.
+The ideas are still interesting, however.
+
+when should we use recursion:
+-complicated problems like traversing or searching through trees/graphs
+
+Everytime you are using a tree or converting something into a tree,
+consider recursion.
+1. Divided into a number of subproblems that are small instances of the
+same problem
+2. Each instance of the subproblem is identical in nature
+3. The solutions of each subproblem can be combined to solve the problem
+at hand
+
+Divide and conquer using recursion

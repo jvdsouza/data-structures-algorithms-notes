@@ -1,0 +1,26 @@
+bubbleSort:
+- fastest is O(n) time, otherwise O(n^2) time
+- space complexity of O(1)
+
+selection sort:
+- always O(n^2) time
+- space complexity of O(1)
+
+insertion sort:
+- good for when the list is almost or already sorted
+- can get O(n) if the list is almost sorted
+- good for small data sets
+- want to use this for almost sorted or sorted arrays over most other
+sort algorithms
+
+merge sort:
+- one of the most efficient ways to sort a list of things
+- nlog(n) sorting time
+- space complexity of O(n)
+- performs better than most other algorithms
+- quite complex
+- n from nlog(n) comes from still having to compare everything
+- dividing the list makes it log(n)
+-- divide and conquer approaches are generally log(n) advantage
+- stable, in that duplicates retain their order in the list
+- what if an array is odd in length

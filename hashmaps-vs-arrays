@@ -1,0 +1,6 @@
+hash tables
+-> quick access to certain items
+-> quick insert (unless collision)
+
+arrays
+-> ordered

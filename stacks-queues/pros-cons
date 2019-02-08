@@ -1,0 +1,26 @@
+Pros:
+Linear data structures
+-> traverse sequentially
+stacks and queues are mainly the same, the only difference is how items get removed
+can Limit operations on a data structures
+-> can limit the user's ability on how they use it
+
+
+Stacks
+-> LIFO
+-> pop, push, peek are O(1) (peek(): Returns the value at the beginning of a collection, the value that would be returned by shift().)
+-> use for browser (back and forth)
+-> Undo option
+-> store the previous state of memory
+
+Queues
+-> FIFO
+-> enqueue(add to the end), dequeue(remove from the start), peek are O(1)
+-> anything that would use a real life queue is a good example (ie waiting list)
+
+Cons:
+Can only access the first or last element
+Lookup of O(n)
+
+-> dont want to use an array to make a queue, as they have shift and unshift operations
+--> these operations are O(n)

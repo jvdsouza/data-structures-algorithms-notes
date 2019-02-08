@@ -1,0 +1,29 @@
+-one of the most used data structures when used to modelling real life
+-set of values that are related in a pair wise fashion
+-each item is a node or vertex
+-each is connected with edges
+
+types:
+-directed
+--one way
+-undirected
+--two ways
+-weighted
+--values in edges
+--used to calculate fastest paths
+-unweighted
+--no values in edges
+-cyclic
+--when you have nodes connected in a circular fashion
+--popular in weighted graphs
+-acyclic
+--nodes not connected in circular fashion
+
+Direct cyclic graphs are common (abbreviated to DAG)
+
+shown as adjacency matrix and adjacent list and edge list
+
+Pros:
+-useful for displaying relationships
+Cons:
+-Scaling is difficult
