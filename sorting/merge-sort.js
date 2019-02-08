@@ -7,7 +7,7 @@ function mergeSort (array) {
   }
   // Split Array into right and left
   let left = array.slice(0, arrayLen/2);
-  let right = array.slice(arrayLen/2, arrayLen);
+  let right = array.slice(arrayLen/2);
 
   // console.log(left);
   // console.log(right);
