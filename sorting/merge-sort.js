@@ -28,11 +28,11 @@ function merge(left, right){
       mergedList.push(left[0])
       left.splice(0, 1)
     }
+    //if we had an odd length left or right
     if(left.length === 0) {
       mergedList.splice(mergedList.length, 0, ...right)
       right = []
-    }
-    if(right.length === 0) {
+    } else if (right.length === 0) {
       mergedList.splice(mergedList.length, 0, ...left)
       left = []
     }
