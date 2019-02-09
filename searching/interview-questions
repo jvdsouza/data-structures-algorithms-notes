@@ -1,0 +1,27 @@
+//If you know a solution is not far from the root of the tree:
+Want to use breath first search as searching by breadth will stop at the
+layer the target node is at, rather than traverse an entire branch.
+This can be bad if you use DFS and the tree is very deep
+
+//If the tree is very deep and solutions are rare:
+Use BFS, as the solution is rare, and the probability of finding the solution
+in the first few branches are low
+
+//If the tree is very wide:
+DFS, BFS requires much more memory due to requiring to store all children of
+each node visited at a level
+
+//If solutions are frequent but located deep in the tree:
+if the solutions are frequent but deep in the tree, DFS would be best to use
+as more solutions would imply more branches would have this solution, therefore
+the probability of the solution being in one of the first few searched branches
+is increased, compared to having to search all levels using BFS all the way down
+
+//Determining whether a path exists between two nodes:
+if we want to determine whether a path exists rather than where a node is located
+it would be best to use DFS as DFS searches by branches rather than by level
+
+//Finding the shortest path:
+finding the shortest path should be left to the BFS algorithm, as it will find
+the location of the node and the branches related to it, as it's keeping store
+of the children of each node

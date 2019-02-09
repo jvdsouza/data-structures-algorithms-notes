@@ -1,0 +1,42 @@
+linear search:
+- sequentially checks each item of a list to find the item desired
+- best case O(1), worst case O(n)
+
+binary search:
+- used on sorted lists
+- O(log(n)) search time
+
+Tree traversal:
+- Breadth first search
+- Depth first search
+- Both are O(n) as we need to visit all nodes/vertices
+
+Breadth First Search:
+- start at root
+- move left to right then move down a level
+- do until you find your desired node or reach the end of the tree
+- uses additional memory as it's necessary to track the child nodes of all
+nodes on that given level
+- good for finding shortest path between starting point and any
+reachable node
+- closer nodes
+- if you have additional information on the location of the target node
+and the node is more likely to be in the upper levels of the tree/graph
+
+Depth First Search:
+- follows one branch at a time until target node or end of branch is
+found
+- if end of branch, move to the nearest ancestor, repeat
+- lower memory requirement than BFS, (O(height of tree))
+- go as deep as possible into a graph/tree
+- different variations
+-- inorder, preorder, postorder
+-- inorder offers the tree in sorted order (doesnt keep relations)
+-- preorder gives us the elements sorted to be able to recreate the tree
+(ie keeps relations)
+-- postorder gives all the children nodes first, then the parents, left
+to right
+- can find if a path exists
+- can be slow especially if the tree is really really deep
+- good for finding nodes in lower levels of a tree/graph
+- not necessarily good for finding the shortest path
