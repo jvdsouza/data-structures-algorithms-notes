@@ -1,10 +1,19 @@
+Mathematically impossible to beat O(nlog(n)) time complexity
+
+Comparison Sorts:
+
 bubbleSort:
 - fastest is O(n) time, otherwise O(n^2) time
+- O(n) in best case because of built in function to detect the list
+is sorted efficiently
+-- insertion sort can do this as well
 - space complexity of O(1)
+- only really used to teach sorting
 
 selection sort:
 - always O(n^2) time
 - space complexity of O(1)
+- only really used to teach sorting
 
 insertion sort:
 - good for when the list is almost or already sorted
@@ -12,6 +21,7 @@ insertion sort:
 - good for small data sets
 - want to use this for almost sorted or sorted arrays over most other
 sort algorithms
+- easy to implement
 
 merge sort:
 - one of the most efficient ways to sort a list of things
@@ -24,3 +34,32 @@ merge sort:
 -- divide and conquer approaches are generally log(n) advantage
 - stable, in that duplicates retain their order in the list
 - what if an array is odd in length
+- better worst case big O compared to quick sort
+
+quick sort:
+- uses pivoting (choosing a random pivot and comparing numbers)
+- one of the most used, next to merge sort
+- in memory sorting
+- O(n log(n)), worst case is O(n^2) (when pivot is smallest or largest item
+in the list)
+- worst for already or almost sorted lists (use insertion sort)
+- fastest on average
+- good space complexity, better than merge sort (O(log(n)))
+- introsort switches quick sort to heap sort when worst case is detected
+
+Heap sort:
+- time complexities of O(nlog(n)) for best, average and worst case
+- space complexity of O(1) as it is in place
+- slower than quick sort
+- uses a binary heap data structure
+- heap implementation
+- unstable sort
+- external sorting not possible
+
+External sorting: class of sorting algorithms that can handle massive
+amounts of data, using secondary storage devices to store the data
+
+Non-Comparison Sort:
+- only work with numbers, specifically integers, between a certain range
+-- this is because of how numbers are stored in memory
+-- only used for fixed length integers

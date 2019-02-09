@@ -23,13 +23,17 @@ function fibonacciIterative(n){ //O(n)
   return fib
 }
 
-console.log(fibonacciIterative(6));
+// console.log(fibonacciIterative(6));
 
+calculations = 0;
 function fibonacciRecursive(n) { //O(2^n)
+  calculations++;
   if (n <=1){
     return n
   }
   return fibonacciRecursive(n-1) + fibonacciRecursive(n-2)
 }
 
-console.log(fibonacciRecursive(6))
+
+console.log(fibonacciRecursive(7))
+console.log('calculations', calculations)

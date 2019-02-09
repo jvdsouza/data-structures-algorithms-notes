@@ -11,7 +11,7 @@ Tree traversal:
 - Depth first search
 - Both are O(n) as we need to visit all nodes/vertices
 
-Breadth First Search:
+Breadth First Search: - shortest path
 - start at root
 - move left to right then move down a level
 - do until you find your desired node or reach the end of the tree
@@ -23,7 +23,7 @@ reachable node
 - if you have additional information on the location of the target node
 and the node is more likely to be in the upper levels of the tree/graph
 
-Depth First Search:
+Depth First Search: - check to see if it exists
 - follows one branch at a time until target node or end of branch is
 found
 - if end of branch, move to the nearest ancestor, repeat
@@ -40,3 +40,29 @@ to right
 - can be slow especially if the tree is really really deep
 - good for finding nodes in lower levels of a tree/graph
 - not necessarily good for finding the shortest path
+
+Graph traversal:
+- can use DFS and BFS to traverse graphs
+- instead of just using left and right nodes, can use other names
+- good to find relations to the last item we bought (BFS), or on facebook
+to see recommended friends or to see what degree of connection you have with
+someone else on linkedin (DFS) google maps too use DFS
+
+BFS in graphs:
+- can find the shortest paths from source node to a target node best
+
+DFS in graphs:
+- like solving a maze (does the path to exit exist? backtrack and try a
+different path)
+
+Graphs and shortest path:
+- shortest path of a weighted graph
+- Bellman-Ford algorithm
+-- very effective at solving the shortest path over Dijkstra
+-- accomodates negative weights
+-- not the most efficient algorithm
+-- can take a long time to run in terms of complexity O(n^2)
+- Dijkstra algorithm
+-- faster and more efficient than bellman-ford, but cant accomodate
+for negative weights
+- BFS assumes each path (edge) has the same weight

@@ -1,4 +1,8 @@
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+//find the smallest number, and put it at the start of the list
+//if there's a smaller number at the start, put it next to it
+//that is, find the smallest number and then put it after the
+//already sorted items
 
 function selectionSort(array) {
 

@@ -1,4 +1,7 @@
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+//always O(nlog(n))
+//use if you're not worried of memory complexity
+//and worried more about worst case
 
 function mergeSort (array) {
   arrayLen = array.length

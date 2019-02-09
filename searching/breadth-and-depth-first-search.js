@@ -154,6 +154,29 @@ class BinarySearchTree {
     return list
   }
 
+  BSTValidation() {
+    let currentNode = this.root;
+    let queue = []; //keep track of the level we're at so we can
+                    //access the children
+    queue.push(currentNode);
+
+    while(queue.length > 0){
+      currentNode = queue.shift();
+      // list.push(currentNode.value);
+      if (currentNode.left) {
+        if(currentNode.left.value < currentNode.value) {
+          queue.push(currentNode.left)
+        } else {return false}
+      }
+      if (currentNode.right) {
+        if(currentNode.right.value > currentNode.value) {
+          queue.push(currentNode.right)
+        } else {return false}
+      }
+    }
+    return true
+  }
+
   breadthFirstSearchR(queue, list) {
     if (!queue.length) {
       return list;
@@ -240,9 +263,10 @@ tree.insert(1)
 JSON.stringify(traverse(tree.root))
 // console.log(tree.breadthFirstSearch());
 // console.log(tree.breadthFirstSearchR([tree.root], []));
-console.log(tree.DFSInOrder());
-console.log(tree.DFSPreOrder());
-console.log(tree.DFSPostOrder());
+// console.log(tree.DFSInOrder());
+// console.log(tree.DFSPreOrder());
+// console.log(tree.DFSPostOrder());
+console.log(tree.BSTValidation());
 //     9
 //  4     20
 //1  6  15  170

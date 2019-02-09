@@ -1,5 +1,6 @@
 const numbers = [99, 44, 6, 2, 1, 5, 44, 63, 87, 44, 283, 4, 0];
-// 44 99 6
+//insertion sort is going to the next value on the right
+//and finding where it fits in the left
 function insertionSort(array) {
   arrayLen = array.length
   for (let i=1; i<arrayLen; i++){
